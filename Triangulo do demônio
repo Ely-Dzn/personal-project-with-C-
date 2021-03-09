@@ -1,0 +1,81 @@
+#include <iostream> 
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main ()
+{
+int A, B, C, D, X, Y, Z, W, R, XX, XXX, YY, YYY, ZZ, ZZZ, WW, WWW, Ar, Br, Cr, Dr;
+cin >> A >> B >> C >> D;
+if (A <=0 || A >=101 || B <=0 || B >=101 || C <=0 || C >=101 || D <=0 || D >=101) 
+return 0;
+if (A >= B && A >= C)
+  {if (A < B+C)
+  X=1;
+  else X=0;}
+  else X = 0;
+  if (A >= C && A >= D)
+  {if (A < C+D)
+  XX=1;
+  else XX=0;}
+  else XX = 0;
+  if (A >= D && A >= B)
+  {if (A < B+D)
+  XXX=1;
+  else XXX=0;}
+  else XXX = 0;
+  Ar = X+XX+XXX;
+if (B >= A && B >= C)
+  {if (B < A+C)
+  Y=1;
+  else Y=0;}
+  else Y = 0;
+  if (B>= C && B >= D)
+  {if (B < C+D) 
+  YY=1;
+  else YY=0;}
+  else YY = 0;
+  if (B >= A && B >= D)
+  {if (B < A+D)
+  YYY=1;
+  else YYY=0;}
+  else YYY = 0;
+  Br = Y+YY+YYY;
+if (C >= A && C >= B)
+  {if (C < B+A)
+  Z=1;
+  else Z=0;}
+  else Z = 0;
+  if (C >= A && C >= D)
+  {if (C < A+D) 
+  ZZ=1;
+  else ZZ=0;}
+  else ZZ = 0;
+  if (C >= B && C >= D)
+  {if (C < B+D)
+  ZZZ=1;
+  else ZZZ=0;}
+  else ZZZ = 0;
+  Cr = (Z+ZZ+ZZZ);
+if (D >= B && D >= C)
+  {if (D < B+C)
+  W=1;
+  else W=0;}
+  else W = 0;
+  if (D >= C && D >= A)
+  {if (D < C+A) 
+  WW=1;
+  else WW=0;}
+  else WW = 0;
+  if (D >= A && D >= B)
+  {if (D < B+A)
+  WWW=1;
+  else WWW=0;}
+  else WWW = 0;
+  Dr = W+WW+WWW;
+R = (Dr+Cr+Br+Ar);
+if (R>=1)
+cout << "S\n";
+else 
+cout << "N\n";
+}

@@ -1,0 +1,28 @@
+#include <iostream>
+#include <iomanip> 
+#include <cmath>
+using namespace std;
+long double B(int a, long double c,long double d)
+{
+if (a!=0)
+{
+  d=((d*6)+1)/d;
+
+return B(a-1,c,d);}
+else
+c= d-3;
+cout << fixed << setprecision(10) << c << endl;
+return 0;
+}
+
+int main()
+{
+ long double A,C,D;
+ cin >> A;
+ if (A>100||A<0)
+ {
+ return 0;}
+ D=6;
+ B(A,C,D);
+ return 0;
+}

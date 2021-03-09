@@ -1,0 +1,47 @@
+#include <iostream> 
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main ()
+{
+int A, B, Y, C, D, E;
+cin >> A >> B >> C;
+if (A <0 || A >1000 || B <0 || B >1000 || C <0 || C >1000) 
+return 0;
+if (A > B && A > C)
+  {if (A < B+C)
+  {Y= A*2+C*2;
+  cout << Y;}
+  if (A > B+C)
+  {Y= B*2+C*4;
+  cout << Y;}
+  if (A == B+C)
+  {Y= B*2+C*2;
+  cout << Y;}
+  }
+if (B > A && B > C)
+  {if (B < A+C)
+  {Y= A*2+C*2;
+  cout << Y;}
+  if (B > A+C)
+  {Y= A*2+C*2;
+  cout << Y;}
+  if (B == A+C)
+  {Y= A*2+C*2;
+  cout << Y;}
+  }
+if (C > A && C > B)
+  {if (C < A+B)
+  {Y= C*2+A*2;
+  cout << Y;}
+  if (C > A+B)
+  {Y= B*2+A*4;
+  cout << Y;}
+  if (C == A+B)
+  {Y= B*2+A*2;
+  cout << Y;}}
+if (C == A && C == B)
+ {Y= A*2+C*2;
+  cout << Y;}
+}

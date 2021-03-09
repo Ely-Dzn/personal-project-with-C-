@@ -1,0 +1,36 @@
+#include <iostream>
+#include <iomanip> 
+#include <cmath>
+using namespace std;
+int B(int a, int c,int d,int e)
+{
+int x;
+if (a==0)
+return 0;
+if (c==0 && d==0)
+{cin >> c;
+d=1;
+if (c>1000000000||c<1)
+ return 0;}
+if (c!=d)
+{int W =c%d; 
+if (W==0&& c!=d)
+return B(a,c,d+1,e+d);
+return B(a,c,d+1,e);}
+if (e==c)
+   cout << c << " eh perfeito" << endl;
+ else
+   cout << c << " nao eh perfeito" << endl;
+return B(a-1,c-d,d-c,e-e);}
+
+int main()
+{
+ int A,C,D,E=0;
+ cin >> A;
+ if (A>20||A<1)
+ return 0;
+ C=0;
+ D=0;
+ B(A,C,D,E);
+ return 0;
+}

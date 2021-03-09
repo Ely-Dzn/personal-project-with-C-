@@ -1,0 +1,48 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+
+using namespace std;
+int main()
+{  
+long long int X[100000], A=0, C=0,B, V[100000], W=0, Y=0, Q, D=0;
+char Z[100000];
+while ( cin >> Q && Q>=2)
+ { if (Q%2==1|| Q>100000)
+ return 0;
+while (Q!=Y)
+  {
+  cin >> X[Y] >> Z[Y];
+  if (X[Y]>60||X[Y]<30)
+  return 0;
+  Y++;}
+  B=Y-1;
+  V[D]=0;
+  cout << D << " 0A" << endl;
+while (C!=-1)
+   {
+ while (B!=-99)
+  {if (A!=B)
+   {if(X[A]==X[B] && Z[A]!=Z[B])
+    V[D]=V[D]+1;
+    cout << "WHYYY" << endl;}
+    if (A==B)
+    B=0;
+  if (B==0)
+    {B=Y;
+    A++;}
+    B--;
+  if (A==Y-1)
+    break;
+    }
+  D=D+1;
+   Y=0;
+   A=0;
+   C=-1;}
+  }
+while (D!=W)
+   {
+   cout << V[W] << endl;
+   W++;
+   }
+return 0;}

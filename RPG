@@ -1,0 +1,35 @@
+#include <iostream> 
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+
+float T, Y, I, A;
+   cout << "\nValor Adquirido: "; 
+ cin >> T;
+   cout << "\nNivel Atual: ";
+ cin >> Y;
+   I = ((sqrt((4*(Y*Y))+(4*Y)+(8*T)+1))-1)/2;
+int B = I; 
+A = B*(I-B);
+int R = A;
+if (Y>T) 
+   ;
+  if (A==0)
+    { 
+    ;
+    }
+   else 
+    {
+    R++;
+    }
+    if (B>594)
+     {
+     cout << "O nivel maximo é 594\n";
+     }
+     cout << "Novo Nivel:" << " " << B << endl; 
+     cout << "Resto:" << " " << R << endl;
+return 0;
+}

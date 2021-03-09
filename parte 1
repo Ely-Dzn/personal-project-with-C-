@@ -1,0 +1,46 @@
+#include <iostream>
+#include <iomanip> 
+#include <cmath>
+using namespace std;
+long long int B(long long int a, long long int c,long long int d, long long int f[], long long int g=-1, long long int n=1)
+{
+  long long int K,Y, Z[121389];
+if (a!=-2)
+{ 
+  if (c!=-1 && c!=0)
+  {g++;
+  f[g]=abs(c);
+  cout << f[g] << endl;
+  }
+return B(a-1,c-(c-d),c-d,f,g,n);}
+if (K!=3)
+{ 
+  K=f[g];
+  Y=0;
+  K=0;
+while (K!=3)
+{
+  K--;
+  if (K!= 5 && K!= 8&& K!= 13&& K!= 21&& K!= 34&& K!= 55&& K!= 89&& K!= 144&& K!= 233&& K!= 377&& K!= 610&& K!= 987&& K!= 1597&& K!= 2584&& K!= 4181&& K!= 6765&& K!= 10946&& K!= 17711&& K!= 28657&& K!= 46368&& K!= 75025)
+  {Z[Y]= K;
+  Y++;}
+  cout << K << endl;
+}
+return B(a,c,d,f,g,n);}
+else 
+{cout << Z[n] << endl;
+return 0;}
+}
+
+int main()
+{
+ long long int A,C,D,G,N;
+ cin >> N;
+long long int F[26];
+ C=1;
+ D=0;
+ G=-1;
+ A=26;
+ B(A,C,D,F,G,N);
+ return 0;
+}

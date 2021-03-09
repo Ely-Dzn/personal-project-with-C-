@@ -1,0 +1,175 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <cstdlib>
+using namespace std;
+
+int Primeiro (int quantidade,int Medido,int Resultado)
+{
+//Nessa parte são declarada as perguntas e as posiçoes respostas.
+    string Pergunta[66],Resposta[11],Reset;
+    string TABELA01A,TABELA02A,TABELA01B,TABELA02B;
+      Pergunta[0]= "01° Por quanto tempo você pretende deixar seu dinheiro investido?";
+        Pergunta[1]= "A: Menos de 6 meses";
+        Pergunta[2]= "B: Entre 6 meses e 1 ano";
+        Pergunta[3]= "C: Entre 1 ano e 3 anos";
+        Pergunta[4]= "D: Acima de 3 anos";
+        Pergunta[5]= "";
+      Pergunta[6]= "02° Qual o objetivo desse investimento?";
+        Pergunta[7]= "A: Preservação do capital para não perder valor ao longo do tempo, assumindo baixos riscos de perdas";
+        Pergunta[8]= "B: Aumento gradual do capital ao longo do tempo, assumindo riscos moderados";
+        Pergunta[9]= "C: Aumento do capital acima da taxa de retorno média do mercado, mesmo que isso implique assumir riscos de perdas elevada";
+        Pergunta[10]= "D: Obter no curto prazo retornos elevados e significativamente acima da taxa de retorno média do mercado, assumindo riscos elevados";
+        Pergunta[11]= "";
+      Pergunta[12]= "03° Qual das alternativas melhor classifica sua formação e experiência com o mercado financeiro?";
+        Pergunta[13]= "A: Não possuo formação acadêmica ou conhecimento do mercado financeiro";
+        Pergunta[14]= "B: Possuo formação acadêmica na área financeira, mas não tenho experiência com o mercado financeiro";
+        Pergunta[15]= "C: Possuo formação acadêmica em outra área, mas possuo conhecimento do mercado financeiro";
+        Pergunta[16]= "D: Possuo formação acadêmica na área financeira ou pleno conhecimento do mercado financeiro";
+        Pergunta[17]= "";
+      Pergunta[18]= "04° Considerando seus rendimentos regulares, qual a porcentagem você pretende reservar para aplicações financeiras?";
+        Pergunta[19]= "A: No máximo 25%";
+        Pergunta[20]= "B: Entre 25,01 e 50%";
+        Pergunta[21]= "C: Acima de 50% ";
+        Pergunta[22]= "";
+        Pergunta[23]= "";
+      Pergunta[24]= "05° Caso as suas aplicações sofressem uma queda superior a 30%, o que você faria?";
+        Pergunta[25]= "A: Resgataria toda a aplicação e aplicaria na poupança";
+        Pergunta[26]= "B: Manteria aplicação aguardando uma melhora do mercado";
+        Pergunta[27]= "C: Aumentaria a aplicação para aproveitar as oportunidades do mercado";
+        Pergunta[28]= "";
+        Pergunta[29]= "";
+      Pergunta[30]= "06° Como está distribuído o seu patrimônio? ";
+        Pergunta[31]= "A: Meu patrimônio não está aplicado ou está todo aplicado em renda FIxa e/ou imóveis";
+        Pergunta[32]= "B: Menos de 25% em renda variável e o restante em renda fixa e/ou imóveis";
+        Pergunta[33]= "C: Entre 25,01 e 50% aplicado em renda variável e o restante em renda fixa e/ou imóveis";
+        Pergunta[34]= "D: Acima de 50% em renda variável";
+        Pergunta[35]= "";
+      Pergunta[36]= "07° Em relação as aplicações e rendimentos, em qual dessas situações você se enquadra? ";
+        Pergunta[37]= "A: Conto com o rendimento dessas aplicações para complementar minha renda mensal ";
+        Pergunta[38]= "B: Conto com o rendimento dessas aplicações para complementar minha renda mensal  ";
+        Pergunta[39]= "C: Não tenho intenção de resgatar no curto prazo, mas não pretendo realizar novas aplicações";
+        Pergunta[40]= "D: Não tenho intenção de resgatar no curto prazo e ainda pretendo fazer aplicações regulares";
+        Pergunta[41]= "";
+      Pergunta[42]= "08° Indique em quais aplicações listadas abaixo você já investiu e qual a frequência nos últimos dois anos. Pode assinalar mais do que uma alternativa.";
+        Pergunta[43]= TABELA01A;
+        Pergunta[44]= TABELA02A;
+        Pergunta[45]= "A: Entre 0 e 1 ponto";
+        Pergunta[46]= "B: Entre 2 e 4 pontos";
+        Pergunta[47]= "C: Acima de 5 pontos";
+      Pergunta[48]= "09° Tomando por base as respostas da questão anterior, informar o volume aproximado que foi destinado a cada operação no período. Obs: Efetue a somatória dos pontos referente a questão e escolha a alternativa equivalente:";
+        Pergunta[49]= TABELA01B;
+        Pergunta[50]= TABELA02B;
+        Pergunta[51]= "A: 1 ponto";
+        Pergunta[52]= "B: Entre 2 e 6 pontos";
+        Pergunta[53]= "C: Acima de 7 pontos";
+      Pergunta[54]= "10° Qual sua faixa de renda mensal média?";
+        Pergunta[55]= "A: Até R$ 1.000";
+        Pergunta[56]= "B: De R$ 1.001 até R$ 5.000";
+        Pergunta[57]= "C: De R$ 5.001 até R$ 10.000";
+        Pergunta[58]= "D: Acima de R$ 10.000";
+        Pergunta[59]= "";
+      Pergunta[60]= "11° Qual o valor aproximado do seu patrimônio?";
+        Pergunta[61]= "A: Até R$ 10.000 ";
+        Pergunta[62]= "B: De R$ 10.001 até R$ 100.000";
+        Pergunta[63]= "C: De R$ 100.001 até R$ 500.000";
+        Pergunta[64]= "D: De R$ 500.001 até R$ 1.000.000";
+        Pergunta[65]= "E: Acima de R$ 1.000.001";
+
+//Apresentação das perguntas e respostas.  
+     if (Pergunta[quantidade]!="")  
+     {cout << Pergunta[quantidade] << endl;
+     cout << "" << endl;}
+       if(Medido ==6){
+         quantidade-=5;
+         cin >> Resposta[quantidade];
+         //Avalição do Resultado.
+           if (Resposta[quantidade]=="A")
+           Resultado+=0;
+           if (Resposta[quantidade]=="B")
+           Resultado+=2;
+           if (Resposta[quantidade]=="C")
+           Resultado+=3;
+           if (Resposta[quantidade]=="D")
+           Resultado+=4;
+          if (Resposta[quantidade]=="E")
+           Resultado+=5;
+         cout << "" << endl;
+         quantidade+=5;
+         Medido=0;}
+//Resultado.
+    if (quantidade==65){
+    if (Resultado<=14){
+    cout << "Conservador" << endl;}
+    if (Resultado>14&&Resultado<36)
+    cout << "Moderado" << endl;
+    if(Resultado>36)
+     cout << "Arrojado" << endl;
+     cout << ".........." << endl;
+     cout << "execultar outra função?" << endl;
+// Finalização.
+  return 1;
+//Returno a função "int main";
+//Programa encerrado;
+}
+return Primeiro(quantidade+1,Medido+1,Resultado);
+}
+int Segundo ()
+{
+
+return Segundo();
+}
+
+int Terceiro ()
+{
+
+return Terceiro();
+}
+
+int Quarto(int a, int c,int d, int e, int f[], int g=-1)
+{
+
+return Quarto(a,c,d,e,f,g);
+}
+
+
+
+int main()
+{
+int Y,C,D,E,G,T,Tamanho;
+int F[Y];
+// Essa string tem como função apresentar as carateristicas do menu.
+ string Informativo[10],Nome,Escolhido;
+  Informativo[0]= "#";
+  Informativo[1]="MENU";
+  Informativo[2]= "ID DO TIPO DE INVESTIDOR.";
+  Informativo[3]= "RECOMENDAÇÃO DE PRORTFÓLIO E INDICAÇÃO DE ALOC.";
+  Informativo[4]= "PREVISÃO DE LUCRO:";
+  Informativo[5]= "CALCULO COM JUROS COMPOSTOS.";
+// Os lanços a seguir sevem para imprimir o menu para o usuario.
+for (Tamanho=0;Tamanho<40;Tamanho++)
+ {  cout << Informativo[0];
+     if (Tamanho==20)
+      cout << " PROJETO GUIA DE INVESTIMENTO MATA045 ";}
+for (Tamanho=0;Tamanho<6;Tamanho++)
+ cout << Informativo[Tamanho] << endl;
+// A seguir, o usuario vai indicar qual função deseja realizar, apatir de uma das strings.
+getline(cin, Escolhido);
+
+if(Escolhido==Informativo[2])
+{cout << "" << endl;
+ Primeiro(Y=0,C=1,D=0);}
+ cout << "AQUI!!!!!" << endl;
+ getline(cin, Escolhido);
+if(Escolhido==Informativo[3])
+ Segundo();
+ getline(cin, Escolhido);
+if(Escolhido==Informativo[4])
+ Terceiro();
+ getline(cin, Escolhido);
+if(Escolhido==Informativo[5])
+ Quarto(Y,C,D,E,F,G);
+ getline(cin, Escolhido);
+return 0;
+}
+

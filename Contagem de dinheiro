@@ -1,0 +1,54 @@
+#include <iostream>
+#include <iomanip> 
+#include <cmath>
+using namespace std;
+ 
+int main() 
+{
+ 
+ float A, B, C, D, E, F, G, H, I, J, K, L, M, O, P, Q, R, S, T, U, V, X, Y, Z, N; 
+   cin >> N;
+if (N =< 1000000.00)
+    if (N => 0)
+    {
+   A = N/100;
+   B = N%100;
+   C = B/50;
+   D = B%50;
+   E = D/20;
+   F = D%20;
+   G = F/10;
+   H = F%10;
+   I = H/5;
+   J = H%5;
+   K = J/2;
+   L = J%2;
+   M = L/1;
+   O = L%1; 
+   P = O/0.50;
+   Q = O%0.50;
+   R = Q/0.25;
+   S = Q%0.25;
+   T = S/0.10;
+   U = S%0.10;
+   V = U/0.05;
+   X = U%0.05;
+   Y = X/0.01;
+   Z = X%0.01;
+  cout << "NOTAS:" << endl;
+  cout << A << " nota(s) de R$ 100.00" << endl;
+  cout << C << " nota(s) de R$ 50.00" << endl;
+  cout << E << " nota(s) de R$ 20.00" << endl;
+  cout << G << " nota(s) de R$ 10.00" << endl;
+  cout << I << " nota(s) de R$ 5.00" << endl;
+  cout << K << " nota(s) de R$ 2.00" << endl;
+  cout << "MOEDAS:" << endl;
+  cout << M << " moeda(s) de R$ 1.00" << endl;
+  cout << P << " moeda(s) de R$ 0.50" << endl;
+  cout << R << " moeda(s) de R$ 0.25" << endl;
+  cout << T << " moeda(s) de R$ 0.10" << endl;
+  cout << V << " moeda(s) de R$ 0.05" << endl;
+  cout << Y << " moeda(s) de R$ 0.01" << endl;
+    }
+return 0;
+    }
